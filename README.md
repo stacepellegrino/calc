@@ -1,5 +1,5 @@
 # calc
-Mixed-base expression parser allowing for calculations between hexadecimal (base 16), denary (base 10),  octal  (base  8)  and  binary (base 2).
+Mixed-base expression parser for calculations between hexadecimal (base 16), denary (base 10),  octal  (base  8)  and  binary (base 2).
 
 ## Building
 To compile the code execute:
