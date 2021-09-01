@@ -1,0 +1,51 @@
+.\" Manpage for calc.
+.\" Contact sp1119s@greenwich.ac.uk to correct errors or typos.
+.TH man 1 "1 September 2021" "1.0.0" "calc manpage"
+.SH NAME
+.B calc
+\-\- mixed-base expression parser allowing for calculations between hexadecimal (base 16), denary (base 10), octal (base 8) and binary (base 2).
+.SH SYNOPSIS
+.B calc
+\fIexpression\fR
+.SH DESCRIPTION
+.B calc
+is a parser for arithmetic operations such as, addition, subtraction, multiplication, division and powers, using any supported mixed-base values, which can be expressed as a combination of different bases in the same expression. Parenthesis are also supported for expressions, also enforcing precedence.
+
+NOTE: The answer written to STDOUT is always denary (base 10) and at present is only an integer, whereby decimal values get rounded down to the nearest integer.
+
+For defining the base of a number in an expression requires one of the following prefixes (whereby [number] is substituted accordingly):
+.LP
+Hexadecimal (base 16): $[number]
+.LP
+Octal (base 8)       : ![number]
+.LP
+Binary (base 2)      : &[number]
+.LP
+Power                : [number]^[number]
+.LP
+NOTE: Denary (base 10) has no prefix.
+
+.SH EXAMPLES
+$ ./calc
+.br
+Mixed-base expression executes after EOF
+.br
+$F * &101 - (2^3)
+.br
+EOF
+.br
+67
+.LP
+$ ./calc
+.br
+Mixed-base expression executes after EOF
+.br
+((!130 - &1000) * $A) / 2    
+.br
+EOF
+.br
+400
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Stacey Pellegrino (sp1119s@greenwich.ac.uk)
